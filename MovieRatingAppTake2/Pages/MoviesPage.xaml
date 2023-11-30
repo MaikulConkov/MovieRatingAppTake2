@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieRatingAppTake2.Pages.MoviesPage"
+             xmlns:vm="clr-namespace:MovieRatingAppTake2.ViewModels"
+             xmlns:models="clr-namespace:MovieRatingAppTake2.Models"
+             xmlns:controls="clr-namespace:MovieRatingAppTake2.Controls"
+             x:DataType="vm:MoviesPageViewModel">
+
+    <Grid Margin="0"
+          Padding="0">
+        <ScrollView BackgroundColor="Black">
+            <VerticalStackLayout>
+                <Grid HeightRequest="500">
+                    <Image Aspect="Center"
+                     HeightRequest="550"
+                     VerticalOptions="Start"
+                     Opacity="0.7">
+                        <Image.Source>
+                            <UriImageSource Uri="{Binding TrendingMovie.Thumbnail}"/>
+                        </Image.Source>
+                    </Image>
+                </Grid>
+                <controls:MovieRow Heading="Trending" Movies="{Binding TrendingMovies}" OnMovieSelected="MovieRow_OnMovieSelected"/>
+                <controls:MovieRow Heading="Action" Movies="{Binding ActionMovies}" OnMovieSelected="MovieRow_OnMovieSelected"/>
+                <controls:MovieRow Heading="Animation" Movies="{Binding AnimationMovies}" OnMovieSelected="MovieRow_OnMovieSelected"/>
+                <controls:MovieRow Heading="Crime" Movies="{Binding CrimeMovies}" OnMovieSelected="MovieRow_OnMovieSelected"/>
+                <controls:MovieRow Heading="Drama" Movies="{Binding DramaMovies}" OnMovieSelected="MovieRow_OnMovieSelected"/>
+                
+            </VerticalStackLayout>
+        </ScrollView>
+        <controls:MovieInfo Movie="{Binding SelectedMovie}"
+                            IsVisible="{Binding ShowMovieInfoBox}"
+                            Close="MovieInfo_Close"    
+                            Rate="MovieInfo_Rate"
+                            RateButtonIsVisible="{Binding RateButtonIsVisible, Mode=TwoWay}"
+                            MovieRating="{Binding SelectedMovieRating, Mode=TwoWay}"
+                            RateButtonIsReadOnly="{Binding RateButtonIsReadOnly, Mode=TwoWay}"/>
+    </Grid>
+
+</ContentPage>

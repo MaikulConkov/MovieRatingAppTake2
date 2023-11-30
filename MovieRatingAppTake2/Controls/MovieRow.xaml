@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:MovieRatingAppTake2.Models"
+             xmlns:controls="clr-namespace:MovieRatingAppTake2.Controls"
+             x:Class="MovieRatingAppTake2.Controls.MovieRow"
+             x:Name="this">
+    <VerticalStackLayout BackgroundColor="Black"
+                         BindingContext="{x:Reference this}">
+        <Label Text="{Binding Heading}"
+               TextColor="White"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Start"
+               Margin="10,10,0,0"/>
+        <CollectionView ItemsSource="{Binding Movies}">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal"
+                                   ItemSpacing="5"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Movie">
+                    <Border StrokeShape="RoundRectangle 5"
+                            Stroke="Black"
+                            StrokeThickness="1"
+                            BackgroundColor="Black">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type controls:MovieRow}}, Path=MovieSelectedCommand}"
+                                                  CommandParameter="{Binding .}"/>
+                        </Border.GestureRecognizers>
+                        <Grid>
+                            <Image Aspect="AspectFit"
+                                   HeightRequest="200"
+                                   WidthRequest="120"
+                                   IsVisible="True"
+                                   >
+                                <Image.Source>
+                                    <UriImageSource Uri="{Binding ThumbnailSmall}"/>
+                                </Image.Source>
+                            </Image>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentView>

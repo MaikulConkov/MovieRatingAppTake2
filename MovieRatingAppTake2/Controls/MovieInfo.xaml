@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MovieRatingAppTake2.Controls"
+             x:Class="MovieRatingAppTake2.Controls.MovieInfo"
+             x:Name="this"
+             Padding="0"
+             Margin="0">
+
+    <Border BindingContext="{x:Reference this}"
+            StrokeShape="RoundRectangle 10, 10,0,0"
+            StrokeThickness="0"
+            BackgroundColor="#2b2b2b"
+            Margin="0"
+            Padding="0"
+            HeightRequest="250"
+            VerticalOptions="End">
+        <VerticalStackLayout>
+            <Grid RowDefinitions="Auto, Auto, Auto"
+                  ColumnDefinitions="120,*"
+                  Padding="10"
+                  ColumnSpacing="10">
+                <Border
+                    Grid.Column="0"
+                    Grid.RowSpan="3"
+                    HeightRequest="160"
+                    WidthRequest="120"
+                    StrokeShape="RoundRectangle 5"
+                    StrokeThickness="0"
+                    Stroke="#2b2b2b"
+                    Margin="0"
+                    Padding="0">
+                    <Image Aspect="AspectFill"
+                               HeightRequest="160"
+                               WidthRequest="120">
+                        <Image.Source>
+                            <UriImageSource Uri="{Binding Movie.Thumbnail}"/>
+                        </Image.Source>
+                    </Image>
+                </Border>
+
+                <Grid Grid.Row="0"
+                      Grid.Column="1"
+                      ColumnDefinitions="*, Auto">
+                    <Label Grid.Column="0" Text="{Binding Movie.DisplayTitle}" FontSize="17"
+                           LineBreakMode="CharacterWrap"
+                           TextColor="White"/>
+                    <Button Grid.Column="1"
+                            Text="X"
+                            FontSize="17"
+                            BackgroundColor="#525252"
+                            VerticalOptions="Start"
+                            Margin="5"
+                            Padding="0"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            CornerRadius="25"
+                            Clicked="Close_Clicked"/>
+                </Grid>
+                <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Text="{Binding Movie.ReleaseDate}"
+                       FontSize="11"
+                       TextColor="White"/>
+                <Label Grid.Row="2"
+                       Grid.Column="1"
+                       Text="{Binding Movie.Overview}"
+                       FontSize="13"
+                       MaxLines="5"
+                       TextColor="White"/>
+            </Grid>
+            <BoxView HeightRequest="2"
+                     BackgroundColor="#9d9d9d"
+                     Color="#9d9d9d"
+                     Margin="5, 0"
+                     />
+            <HorizontalStackLayout Margin="10">
+                <controls:StarRatingControl x:Name="starRatingControl"
+                            IsReadOnly="{Binding RateButtonIsReadOnly, Mode=TwoWay}"
+                            Value="{Binding MovieRating, Mode=TwoWay}"
+                            IsVisible="True"
+                            />
+                <Button Text="Rate"
+                        HeightRequest="40"
+                        WidthRequest="60"
+                        FontSize="15"
+                        Margin="0, 0, 0, 15"
+                        BackgroundColor="Red"
+                        Clicked="Rate_Clicked"
+                        IsVisible="{Binding RateButtonIsVisible, Mode=TwoWay}"/>
+            </HorizontalStackLayout>
+            
+
+        </VerticalStackLayout>
+    </Border>
+</ContentView>

@@ -1,0 +1,1 @@
+C:\Maui Projects\MovieRatingAppTake2\MovieRatingAppTake2\MovieRatingAppTake2.csproj;x64

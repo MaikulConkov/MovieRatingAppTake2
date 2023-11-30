@@ -1,0 +1,71 @@
+is_global = true
+build_property.TargetFramework = net7.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MovieRatingAppTake2
+build_property.ProjectDir = C:\Maui Projects\MovieRatingAppTake2\MovieRatingAppTake2\
+
+[C:/Maui Projects/MovieRatingAppTake2/MovieRatingAppTake2/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MovieRatingAppTake2.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Maui Projects/MovieRatingAppTake2/MovieRatingAppTake2/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MovieRatingAppTake2.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Maui Projects/MovieRatingAppTake2/MovieRatingAppTake2/Controls/MovieInfo.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MovieRatingAppTake2.Controls.MovieInfo.xaml
+build_metadata.AdditionalFiles.TargetPath = Controls\MovieInfo.xaml
+build_metadata.AdditionalFiles.RelativePath = Controls\MovieInfo.xaml
+
+[C:/Maui Projects/MovieRatingAppTake2/MovieRatingAppTake2/Controls/MovieRow.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MovieRatingAppTake2.Controls.MovieRow.xaml
+build_metadata.AdditionalFiles.TargetPath = Controls\MovieRow.xaml
+build_metadata.AdditionalFiles.RelativePath = Controls\MovieRow.xaml
+
+[C:/Maui Projects/MovieRatingAppTake2/MovieRatingAppTake2/Controls/StarRatingControl.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MovieRatingAppTake2.Controls.StarRatingControl.xaml
+build_metadata.AdditionalFiles.TargetPath = Controls\StarRatingControl.xaml
+build_metadata.AdditionalFiles.RelativePath = Controls\StarRatingControl.xaml
+
+[C:/Maui Projects/MovieRatingAppTake2/MovieRatingAppTake2/Pages/Home.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MovieRatingAppTake2.Pages.Home.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Home.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Home.xaml
+
+[C:/Maui Projects/MovieRatingAppTake2/MovieRatingAppTake2/Pages/MoviesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MovieRatingAppTake2.Pages.MoviesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MoviesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MoviesPage.xaml
+
+[C:/Maui Projects/MovieRatingAppTake2/MovieRatingAppTake2/Pages/MoviesRated.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MovieRatingAppTake2.Pages.MoviesRated.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MoviesRated.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MoviesRated.xaml
+
+[C:/Maui Projects/MovieRatingAppTake2/MovieRatingAppTake2/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MovieRatingAppTake2.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Maui Projects/MovieRatingAppTake2/MovieRatingAppTake2/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MovieRatingAppTake2.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

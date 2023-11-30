@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieRatingAppTake2.Pages.Home"
+             Title="Application Details">
+    <ScrollView>
+        <ScrollView.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Label">
+                    <Setter Property="FontSize" Value="18"/>
+                </Style>
+            </ResourceDictionary>
+        </ScrollView.Resources>
+        <VerticalStackLayout Spacing="20" Padding="20">
+
+            <Label Text="Data Integration with TMDb API" FontAttributes="Bold" FontSize="Large"/>
+            <Label Text="My movie collection data is sourced from a third-party API, TMDb (The Movie Database). To interact with this API, I use IHttpClientFactory to create HTTP clients for sending requests. The URLs for these requests are neatly organized in a helper class, Repositories/helpers/TmdbHelpers, where they are stored as static properties. When I receive a response from TMDb, I deserialize the data into a 'Resource Array'. From this array, I extract each item, convert it into a 'MovieObject' using a method defined in the helper class, and then add it to my movie collection. In the initialization phase of my application, specifically in App.xaml.cs, I invoke these repository methods through services. The data retrieved from these methods is then stored in static properties of my AppData class, making it accessible throughout the application." />
+
+            <Label Text="MoviesPageViewModel" FontAttributes="Bold" FontSize="Large"/>
+            <Label Text="The MoviesPageViewModel class serves as ViewModel the Model-View-ViewModel (MVVM) design pattern. This class is responsible for managing and presenting a variety of movie collections, such as trending, action, animation, crime, and drama movies. A key feature of this ViewModel is its ability to handle user interactions related to movie selection and rating. It keeps track of the currently selected movie and its rating. The ViewModel controls whether the rate button should be visible or read-only, based on the selected movie's properties. The ViewModel also randomly selects a trending movie for the user. This is achieved through the SelectRandomMovie method, which picks a movie at random from the available trending movies list. It populates the various movie collections using data from a static AppData class. The ViewModel updates the UI in response to these interactions(selecting a movie and updating its rating)" />
+
+            <Label Text="MoviesPage.xaml" FontAttributes="Bold" FontSize="Large"/>
+            <Label Text="This XAML code crafts the visual interface for a movie rating app's movies page. The page  uses custom MovieRow controls for each  movie genre - Action, Animation, Crime, or Drama. The MovieInfo control is a pivotal element on this page. It's a dynamic panel that reveals detailed information about the selected movie. " />
+
+            <Label Text="StarRatingControl" FontAttributes="Bold" FontSize="Large"/>
+            <Label Text="The StarRatingControl is  a custom control that lets users give ratings using stars, just like in a movie app or a product review. It shows up to five stars that users can tap to set a rating, but only if it's not in 'IsReadOnly' mode. When a user taps a star, the control lights up more stars based on the tap." />
+
+            <Label Text="RatedMoviesViewModel Class" FontAttributes="Bold" FontSize="Large"/>
+            <Label Text="This is a ViewModel class that deals with movies that users have rated. It uses IGetRatedMovies to grab a list of rated movies. This list is stored in an ObservableCollection Movie."/>
+
+            <Label Text="MoviesRated.xaml" FontAttributes="Bold" FontSize="Large"/>
+            <Label Text="This part is all about how to show those rated movies on the screen." />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
